@@ -111,6 +111,7 @@ const App = () => {
               path="/contact"
               render={() => <Contact styles={styles} />}
             />
+            <Route path="*" render={() => <Home styles={styles} />} />
           </Switch>
           <CustomDrawer
             isOpen={isOpen}
