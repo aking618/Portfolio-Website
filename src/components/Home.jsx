@@ -29,7 +29,7 @@ const Home = (props) => {
           <Typography variant="subtitle1" component="h2">
             Flutter Fanatic | E-Sports Enthusiast
           </Typography>
-          <CustomAvatar image={"./assets/avatar.jpg"} />
+          <CustomAvatar image={"/assets/avatar.jpg"} />
         </Grid>
         <Grid item xs={12} sm={12}>
           <Grid item xs={12} sm={6}>

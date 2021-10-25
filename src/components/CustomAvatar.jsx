@@ -6,7 +6,7 @@ const CustomAvatar = ({ image }) => {
     <div
       className="custom-avatar"
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100px",
