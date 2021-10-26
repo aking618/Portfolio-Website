@@ -14,7 +14,8 @@ const projects = [
     title: "Smash Companion App",
     description:
       "A Flutter app that allows Smash Bros. players to track their tournamnent progress and keep notes on their opponents.",
-    image: "https://source.unsplash.com/random/400x400",
+    image:
+      "https://github.com/aking618/smash_app_v2/blob/main/assets/readme-screenshot.png?raw=true",
     link: "https://github.com/aking618/smash_app_v2",
     linkText: "Visit Repository",
     tech: ["Flutter", "Dart", "SQL", "GraphQL"],
@@ -24,7 +25,8 @@ const projects = [
     description:
       "A clone of the classic game, Minesweeper. The game is played on a grid of custom Tiles, each of which has a mine hidden in it or is empty (zero mines adjacent to it)." +
       "The player can then flag tiles as mines or safe tiles.",
-    image: "https://source.unsplash.com/random/400x400",
+    image:
+      "https://github.com/aking618/minesweeper/blob/main/Minesweeper-readme.png?raw=true",
     link: "https://github.com/aking618/minesweeper",
     linkText: "Visit Repository",
     tech: ["React JS, Material UI"],
@@ -34,7 +36,7 @@ const projects = [
     description:
       "The tool utilizes Selenium WebDriver to automate the process of creating a new repository, adding a README, and pushing the repository to your Github account." +
       "The tool also opens the new repository in a visual studio code editor, so you can start coding immediately.",
-    image: "https://source.unsplash.com/random/400x400",
+    image: "/android-chrome-512x512.png",
     link: "https://github.com/aking618/GitHub-Automation",
     linkText: "Visit Repository",
     tech: ["Java", "Selenium WebDriver"],
@@ -43,7 +45,8 @@ const projects = [
     title: "Sorting Algorithms Visualizer",
     description:
       "A visualizer for the sorting algorithms. The visualizer allows you to select the sorting algorithm you want to use and the number of sorted elements, and then you can see the sorting process in action.",
-    image: "https://source.unsplash.com/random/400x400",
+    image:
+      "https://github.com/aking618/Sorting-Algorithm-Visualizer/blob/main/sorting-app.png?raw=true",
     link: "https://github.com/aking618/Sorting-Algorithm-Visualizer",
     linkText: "Visit Repository",
     tech: ["Flutter Web", "Dart"],
