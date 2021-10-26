@@ -1,13 +1,13 @@
-import TopBar from "./components/TopBar";
+import TopBar from "./components/lib/TopBar";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
+import Home from "./components/pages/Home";
+import Contact from "./components/pages/Contact";
+import Resume from "./components/pages/Resume";
 import React, { useState } from "react";
-import CustomDrawer from "./components/CustomDrawer";
-import Projects from "./components/Projects";
+import CustomDrawer from "./components/lib/CustomDrawer";
+import Projects from "./components/pages/Projects";
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
-import Footer from "./components/Footer";
+import Footer from "./components/lib/Footer";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);

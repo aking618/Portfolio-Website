@@ -7,10 +7,9 @@ import {
   Typography,
   makeStyles,
 } from "@material-ui/core";
-import axios from "axios";
 import React from "react";
-import ContentWrapper from "./ContentWrapper";
-import SectionHeader from "./SectionHeader";
+import ContentWrapper from "../lib/ContentWrapper";
+import PageHeader from "../lib/PageHeader";
 import emailjs from "emailjs-com";
 
 const useStyles = makeStyles((theme) => ({
@@ -64,7 +63,7 @@ const Contact = (props) => {
 
   return (
     <ContentWrapper styles={styles}>
-      <SectionHeader title="Contact" subtitle="Get in touch with me" />
+      <PageHeader title="Contact" subtitle="Get in touch with me" />
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12}>

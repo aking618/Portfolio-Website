@@ -1,27 +1,24 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 
-const SectionHeader = ({ title, subtitle }) => {
+const PageHeader = ({ title, subtitle }) => {
   return (
     <div
       className="section-header"
       style={{
-        display: "flex",
-        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
         marginBottom: "2rem",
         textAlign: "center",
       }}
     >
-      <Typography variant="h3" className="section-title">
+      <Typography variant="h4" component="h2" style={{ fontWeight: "bold" }}>
         {title}
       </Typography>
-      <Typography variant="6" className="section-subtitle">
+      <Typography variant="subtitle1" component="h2">
         {subtitle}
       </Typography>
     </div>
   );
 };
 
-export default SectionHeader;
+export default PageHeader;
