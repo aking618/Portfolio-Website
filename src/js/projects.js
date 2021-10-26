@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Smash Companion App",
     description:
-      "A Flutter app that allows Smash Bros. players to track their tournamnent progress and keep notes on their opponents.",
+      "A Flutter app that allows Smash Bros. players to track their tournamnent progress and keep notes on their opponents. ",
     image:
       "https://github.com/aking618/smash_app_v2/blob/main/assets/readme-screenshot.png?raw=true",
     link: "https://github.com/aking618/smash_app_v2",
