@@ -1,5 +1,5 @@
 import TopBar from "./components/lib/TopBar";
-import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Resume from "./components/pages/Resume";
@@ -86,7 +86,7 @@ const App = () => {
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
       <CssBaseline />
 
-      <Router>
+      <HashRouter>
         <div
           style={{
             minHeight: "100vh",
@@ -120,7 +120,7 @@ const App = () => {
           />
           <Footer />
         </div>
-      </Router>
+      </HashRouter>
     </ThemeProvider>
   );
 };
