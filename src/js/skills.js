@@ -2,6 +2,7 @@ const skills = {
   software: [
     "Android Studio",
     "IntelliJ IDEA",
+    "PhpStorm",
     "Visual Studio Code",
     "Vim",
     "MySQL Workbench",
@@ -12,24 +13,28 @@ const skills = {
   toolsAndFrameworks: [
     "Flutter",
     "React",
+    "Material UI",
+    "Framer Motion",
     "Maven",
     "Git",
     "UNIX",
     "Google Firebase",
     "Redux",
     "JQuery",
+    "Postman",
+    "Docker",
   ],
   languages: [
     "Java",
     "Dart",
+    "Kotlin",
+    "Swift",
     "HTML",
     "CSS",
     "JavaScript",
     "PHP",
     "SQL",
-    "C++",
     "C#",
-    "Kotlin",
   ],
 };
 

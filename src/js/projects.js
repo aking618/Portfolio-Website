@@ -29,6 +29,7 @@ const projects = [
       "https://github.com/aking618/minesweeper/blob/main/Minesweeper-readme.png?raw=true",
     link: "https://github.com/aking618/minesweeper",
     linkText: "Visit Repository",
+    demoLink: "https://aking-minesweeper.netlify.app",
     tech: ["React JS, Material UI"],
   },
   {

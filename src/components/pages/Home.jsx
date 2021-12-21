@@ -1,6 +1,6 @@
 import React from "react";
 import ContentWrapper from "../lib/ContentWrapper";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import CodeOutlined from "@material-ui/icons/CodeOutlined";
 import MapOutlined from "@material-ui/icons/MapOutlined";
 import EmailOutlined from "@material-ui/icons/EmailOutlined";

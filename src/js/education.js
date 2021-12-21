@@ -5,7 +5,7 @@ const education = [
     major: "Computer Science",
     minor: "",
     graduation: "December 2022",
-    gpa: "3.7",
+    gpa: "3.8",
     location: "Stillwater, OK",
   },
 ];

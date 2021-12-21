@@ -16,8 +16,9 @@ const Projects = (props) => {
           <Grid
             item
             xs={12}
-            sm={index == projects.length - 1 ? 12 : 6}
-            md={index == projects.length - 1 ? 12 : 4}
+            sm={index === projects.length - 1 ? 12 : 4}
+            md={index === projects.length - 1 ? 12 : 3}
+            lg={index === projects.length - 1 ? 12 : 2}
             key={index}
           >
             <ProjectCard project={project} styles={styles} />

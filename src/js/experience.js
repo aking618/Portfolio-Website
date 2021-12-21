@@ -1,9 +1,20 @@
 const experience = [
   {
-    title: "Software Development Intern",
+    title: "Software Development Intern (Fall 2021 / Spring 2022)",
     company: "Paycom",
     location: "Oklahoma City, OK",
-    dates: "May 2021 - Present",
+    dates: "Agust 2021 - Present",
+    points: [
+      "Developed projects within an Agile environment to accelerate code to users.",
+      "Interact with several platforms and technologies on a daily basis.",
+      "Coordinate with different departments to deliver viable products.",
+    ],
+  },
+  {
+    title: "Software Development Intern (Summer 2021)",
+    company: "Paycom",
+    location: "Oklahoma City, OK",
+    dates: "May 2021 - August 2021",
     points: [
       "Developed projects within an Agile environment to build projects within deadlines.",
       "Utilized several languages and frameworks to deliver a viable product.",

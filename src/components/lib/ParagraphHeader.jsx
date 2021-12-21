@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import { motion } from "framer-motion";
 import CustomDiv from "./CustomDiv";
 
 const ParagraphHeader = ({ children }) => (

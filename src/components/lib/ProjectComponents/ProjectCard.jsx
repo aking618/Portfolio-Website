@@ -70,6 +70,23 @@ const ProjectCard = (props) => {
               {project.linkText}
             </Typography>
           </Button>
+          {project.demoLink && (
+            <Button
+              size="small"
+              color="primary"
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Typography
+                variant="body2"
+                component="p"
+                style={{ color: styles.linkColor }}
+              >
+                Demo
+              </Typography>
+            </Button>
+          )}
         </CardActions>
       </Card>
     </motion.div>
