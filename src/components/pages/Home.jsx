@@ -10,6 +10,7 @@ import BioEntry from "../lib/HomeComponents/BioEntry";
 import Header from "../lib/HomeComponents/Header";
 import Paragraph from "../lib/HomeComponents/Paragraph";
 import DescriptiveIcon from "../lib/HomeComponents/DescriptiveIcon";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const Home = (props) => {
   const { styles } = props;
@@ -174,6 +175,24 @@ const Home = (props) => {
                     style={{ color: styles.linkColor }}
                   >
                     Aking618
+                  </a>
+                </>
+              }
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <DescriptiveIcon
+              icon={<LinkedInIcon />}
+              content={
+                <>
+                  LinkedIn:{" "}
+                  <a
+                    href="https://www.linkedin.com/in/ayren-king/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: styles.linkColor }}
+                  >
+                    Ayren King
                   </a>
                 </>
               }
