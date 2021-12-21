@@ -32,6 +32,7 @@ const skills = {
     "HTML",
     "CSS",
     "JavaScript",
+    "TypeScript",
     "PHP",
     "SQL",
     "C#",
