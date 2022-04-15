@@ -8,10 +8,14 @@ import CustomDrawer from "./components/lib/CustomDrawer";
 import Projects from "./components/pages/Projects";
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import Footer from "./components/lib/Footer";
+import Fade from "./react-reveal/src/in-and-out/Fade";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light" | "dark" | undefined>(
+    window.matchMedia && window.matchMedia('(perfers-color-scheme: dark)').matches ? "dark" : "light")
+  )
+  const [isTest, setIsTest] = useState(true);
 
   const styles = {
     footerPadding: 20,
@@ -86,41 +90,63 @@ const App = () => {
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
       <CssBaseline />
 
-      <HashRouter>
+      {!isTest ? (
+        <HashRouter>
+          <div
+            style={{
+              minHeight: "100vh",
+              position: "relative",
+            }}
+          >
+            <TopBar toggleMenu={toggleMenu} setTheme={setTheme} theme={theme} />
+            <Switch>
+              <Route exact path="/" render={() => <Home styles={styles} />} />
+              <Route
+                exact
+                path="/projects"
+                render={() => <Projects styles={styles} />}
+              />
+              <Route
+                exact
+                path="/resume"
+                render={() => <Resume styles={styles} />}
+              />
+              <Route
+                exact
+                path="/contact"
+                render={() => <Contact styles={styles} />}
+              />
+              <Route path="*" render={() => <Home styles={styles} />} />
+            </Switch>
+            <CustomDrawer
+              isOpen={isOpen}
+              toggleMenu={toggleMenu}
+              linkColor={styles.linkColor}
+            />
+            <Footer />
+          </div>
+        </HashRouter>
+      ) : (
         <div
           style={{
             minHeight: "100vh",
             position: "relative",
           }}
         >
-          <TopBar toggleMenu={toggleMenu} setTheme={setTheme} theme={theme} />
-          <Switch>
-            <Route exact path="/" render={() => <Home styles={styles} />} />
-            <Route
-              exact
-              path="/projects"
-              render={() => <Projects styles={styles} />}
-            />
-            <Route
-              exact
-              path="/resume"
-              render={() => <Resume styles={styles} />}
-            />
-            <Route
-              exact
-              path="/contact"
-              render={() => <Contact styles={styles} />}
-            />
-            <Route path="*" render={() => <Home styles={styles} />} />
-          </Switch>
-          <CustomDrawer
-            isOpen={isOpen}
-            toggleMenu={toggleMenu}
-            linkColor={styles.linkColor}
-          />
+           <TopBar toggleMenu={toggleMenu} setTheme={setTheme} theme={theme} />
+          <Home styles={styles} />
+          <Fade bottom>
+            <Projects styles={styles} />
+          </Fade>
+          <Fade bottom>
+            <Resume styles={styles} />
+          </Fade>
+          <Fade bottom>
+            <Contact styles={styles} />
+          </Fade>
           <Footer />
         </div>
-      </HashRouter>
+      )}
     </ThemeProvider>
   );
 };

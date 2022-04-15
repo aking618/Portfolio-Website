@@ -4,7 +4,6 @@ import {
   CardContent,
   Typography,
   CardActions,
-  CardMedia,
   Button,
 } from "@material-ui/core";
 import { motion } from "framer-motion";
@@ -13,10 +12,12 @@ const ProjectCard = (props) => {
   const { project, styles } = props;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <div
+      style={{
+        minWidth: "300px",
+        maxWidth: "300px",
+        margin: "0 auto",
+      }}
     >
       <Card
         style={{
@@ -27,11 +28,15 @@ const ProjectCard = (props) => {
         }}
       >
         {project.image && (
-          <CardMedia
-            component="img"
+          <img
+            src={project.image}
             alt={project.title}
-            height={project.image.includes("random") ? "140" : "100%"}
-            image={project.image}
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "200px",
+              maxWidth: "200px",
+            }}
           />
         )}
         <CardContent>
@@ -44,7 +49,7 @@ const ProjectCard = (props) => {
           <br />
           {project.tech.length > 0 && (
             <Typography variant="body2" component="p">
-              Technologies:
+              Technologies:{"  "}
               {project.tech.map((tech, index) => (
                 <span key={index}>
                   {tech}
@@ -89,7 +94,7 @@ const ProjectCard = (props) => {
           )}
         </CardActions>
       </Card>
-    </motion.div>
+    </div>
   );
 };
 

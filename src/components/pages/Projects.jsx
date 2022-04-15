@@ -4,28 +4,42 @@ import PageHeader from "../lib/PageHeader";
 import ProjectCard from "../lib/ProjectComponents/ProjectCard";
 import { Grid } from "@material-ui/core";
 import projects from "../../js/projects";
+import { motion } from "framer-motion";
+import Paragraph from "../lib/HomeComponents/Paragraph";
+import Reveal from "../../react-reveal/src/Reveal";
 
 const Projects = (props) => {
   const { styles } = props;
 
   return (
-    <ContentWrapper styles={styles}>
-      <PageHeader title="Projects" subtitle="" />
-      <Grid container spacing={1} alignItems="center">
-        {projects.map((project, index) => (
-          <Grid
-            item
-            xs={12}
-            sm={index === projects.length - 1 ? 12 : 4}
-            md={index === projects.length - 1 ? 12 : 3}
-            lg={index === projects.length - 1 ? 12 : 2}
-            key={index}
-          >
-            <ProjectCard project={project} styles={styles} />
-          </Grid>
-        ))}
-      </Grid>
-    </ContentWrapper>
+    <Reveal effect="fadeInUp">
+      <ContentWrapper styles={styles}>
+        <Paragraph
+          sectionTitle="Projects"
+          isBio={false}
+          sectionContent={
+            <Grid
+              container
+              spacing={2}
+              alignItems="center"
+              justifyContent="center"
+            >
+              {projects.map((project, index) => (
+                <>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <ProjectCard
+                      project={project}
+                      styles={styles}
+                      key={index}
+                    />
+                  </Grid>
+                </>
+              ))}
+            </Grid>
+          }
+        />
+      </ContentWrapper>
+    </Reveal>
   );
 };
 

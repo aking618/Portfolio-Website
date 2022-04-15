@@ -11,6 +11,7 @@ const CustomAvatar = ({ image }) => {
         height: "100px",
         borderRadius: "50%",
         border: "2px solid #fff",
+        margin: "0 auto",
       }}
     />
   );

@@ -7,7 +7,11 @@ const Paragraph = (props) => {
   const { sectionTitle, sectionContent, isBio = false } = props;
 
   return (
-    <CustomDiv>
+    <CustomDiv
+      style={{
+        textAlign: "center",
+      }}
+    >
       <ParagraphHeader>
         <Typography variant="h6">{sectionTitle}</Typography>
       </ParagraphHeader>

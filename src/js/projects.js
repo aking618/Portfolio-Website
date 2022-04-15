@@ -1,9 +1,8 @@
 const projects = [
   {
-    title: "Literally Just a Space Game with Cards (LJSGWC)",
+    title: "Literally Just a Space Game with Cards",
     description:
-      "LJSGC is a procedural single-player deck building game that takes place in the vast expanse of the universe in search of the ultimate prize -- total conquest." +
-      "The game is a single-player card game, where players build their decks of cards and battle against enemies in a turn-based game.",
+      "LJSGC is a procedural single-player deck building game that uses turn-based combat.",
     image:
       "https://github.com/aking618/LJSGC/blob/main/readme-assets/Literally%20just%20a%20space%20game%20with%20cards%20(1).gif?raw=true",
     link: "https://github.com/aking618/LJSGC",
@@ -23,8 +22,7 @@ const projects = [
   {
     title: "Minesweeper Clone",
     description:
-      "A clone of the classic game, Minesweeper. The game is played on a grid of custom Tiles, each of which has a mine hidden in it or is empty (zero mines adjacent to it)." +
-      "The player can then flag tiles as mines or safe tiles.",
+      "A clone of the classic game, Minesweeper, built in Javascript React.",
     image:
       "https://github.com/aking618/minesweeper/blob/main/Minesweeper-readme.png?raw=true",
     link: "https://github.com/aking618/minesweeper",
@@ -35,8 +33,7 @@ const projects = [
   {
     title: "Github Automation",
     description:
-      "The tool utilizes Selenium WebDriver to automate the process of creating a new repository, adding a README, and pushing the repository to your Github account." +
-      "The tool also opens the new repository in a visual studio code editor, so you can start coding immediately.",
+      "The tool utilizes Selenium WebDriver to automate the process of starting a new GitHub project.",
     image: "/android-chrome-512x512.png",
     link: "https://github.com/aking618/GitHub-Automation",
     linkText: "Visit Repository",
@@ -45,7 +42,7 @@ const projects = [
   {
     title: "Sorting Algorithms Visualizer",
     description:
-      "A visualizer for the sorting algorithms. The visualizer allows you to select the sorting algorithm you want to use and the number of sorted elements, and then you can see the sorting process in action.",
+      "A visualizer for the sorting algorithms.",
     image:
       "https://github.com/aking618/Sorting-Algorithm-Visualizer/blob/main/sorting-app.png?raw=true",
     link: "https://github.com/aking618/Sorting-Algorithm-Visualizer",

@@ -9,24 +9,7 @@ const TopBar = (props) => {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <IconButton
-          edge="start"
-          aria-label="menu"
-          onClick={toggleMenu}
-          sx={{ mr: 2 }}
-          style={{
-            borderRadius: "10%",
-            height: "2rem",
-            width: "2rem",
-            padding: "0.5rem",
-            marginRight: "1rem",
-            border: theme === "dark" ? "1px solid #fff" : "1px solid #000",
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Link
-          to="/"
+        <div
           style={{
             textDecoration: "none",
             fontWeight: "bold",
@@ -41,7 +24,7 @@ const TopBar = (props) => {
           <Typography variant="h6" color="textPrimary">
             Ayren King
           </Typography>
-        </Link>
+        </div>
         <IconButton
           edge="end"
           aria-label="menu"

@@ -11,6 +11,7 @@ import React from "react";
 import ContentWrapper from "../lib/ContentWrapper";
 import PageHeader from "../lib/PageHeader";
 import emailjs from "emailjs-com";
+import Paragraph from "../lib/HomeComponents/Paragraph";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -63,84 +64,102 @@ const Contact = (props) => {
 
   return (
     <ContentWrapper styles={styles}>
-      <PageHeader title="Contact" subtitle="Get in touch with me" />
-      <form onSubmit={handleSubmit}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Typography variant="h6">
-              <strong>Name</strong>
-            </Typography>
-            <TextField
-              fullWidth
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              error={error}
-              onError={() => setError(true)}
-              id="name"
-              label="Name"
-              margin="normal"
-              name="from_name"
-              required
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h6">
-              <strong>Email</strong>
-            </Typography>
-            <TextField
-              fullWidth
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              error={error}
-              onError={() => setError(true)}
-              id="email"
-              label="Email"
-              margin="normal"
-              name="from_email"
-              required
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h6">
-              <strong>Message</strong>
-            </Typography>
-            <TextField
-              fullWidth
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              error={error}
-              onError={() => setError(true)}
-              id="message"
-              label="Message"
-              margin="normal"
-              name="message"
-              required
-              variant="outlined"
-              multiline
-              rows="4"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button
-              color="primary"
-              fullWidth
-              size="large"
-              variant="contained"
-              type="submit"
-              disabled={loading}
+      <Paragraph
+        sectionTitle="Contact Me"
+        sectionContent={
+          <>
+            <Typography
+              variant="body1"
+              style={{
+                marginBottom: "1rem",
+              }}
             >
-              <Typography variant="h6">
-                <strong>{!loading ? "Send" : "Sending..."}</strong>
-              </Typography>
-            </Button>
-          </Grid>
-        </Grid>
-      </form>
-      <Backdrop className={classes.backdrop} open={loading}>
-        <CircularProgress color="primary" variant="indeterminate" />
-      </Backdrop>
+              If you have any questions, feel free to reach out to me.
+            </Typography>
+            <form onSubmit={handleSubmit}>
+              <Grid container spacing={1}>
+                <Grid item xs={12} sm={2} md={3} />
+                <Grid item xs={12} sm={8} md={6}>
+                  <Typography variant="h6">
+                    <strong>Name</strong>
+                  </Typography>
+                  <TextField
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    error={error}
+                    onError={() => setError(true)}
+                    id="name"
+                    label="Name"
+                    margin="normal"
+                    name="from_name"
+                    required
+                    variant="outlined"
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={12} sm={2} md={3} />
+                <Grid item xs={12} sm={2} md={3} />
+                <Grid item xs={12} sm={8} md={6}>
+                  <Typography variant="h6">
+                    <strong>Email</strong>
+                  </Typography>
+                  <TextField
+                    fullWidth
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    error={error}
+                    onError={() => setError(true)}
+                    id="email"
+                    label="Email"
+                    margin="normal"
+                    name="from_email"
+                    required
+                    variant="outlined"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={2} md={3} />
+                <Grid item xs={12} sm={2} md={3} />
+                <Grid item xs={12} sm={8} md={6}>
+                  <Typography variant="h6">
+                    <strong>Message</strong>
+                  </Typography>
+                  <TextField
+                    fullWidth
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    error={error}
+                    onError={() => setError(true)}
+                    id="message"
+                    label="Message"
+                    margin="normal"
+                    name="message"
+                    required
+                    variant="outlined"
+                    multiline
+                    rows="4"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Button
+                    color="primary"
+                    size="large"
+                    variant="contained"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    <Typography variant="h6">
+                      <strong>{!loading ? "Send" : "Sending..."}</strong>
+                    </Typography>
+                  </Button>
+                </Grid>
+              </Grid>
+            </form>
+            <Backdrop className={classes.backdrop} open={loading}>
+              <CircularProgress color="primary" variant="indeterminate" />
+            </Backdrop>
+          </>
+        }
+      />
     </ContentWrapper>
   );
 };
